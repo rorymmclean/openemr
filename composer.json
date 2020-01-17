@@ -1,0 +1,100 @@
+{
+    "name" : "openemr/openemr",
+    "description" : "OpenEMR is a Free and Open Source electronic health records and medical practice management application",
+    "license" : "GPL",
+    "support" : {
+        "website" : "https://www.open-emr.org/",
+        "issues" : "https://github.com/openemr/openemr/issues",
+        "forum" : "https://community.open-emr.org/",
+        "wiki" : "https://www.open-emr.org/wiki/index.php/OpenEMR_Wiki_Home_Page",
+        "source" : "https://github.com/openemr/openemr"
+    },
+    "require" : {
+        "php" : ">=7.2.0",
+        "academe/omnipay-authorizenetapi": "3.1.2",
+        "adodb/adodb-php" : "5.20.15",
+        "doctrine/common" : "2.11.0",
+        "doctrine/couchdb" : "1.0-beta4",
+        "doctrine/orm" : "2.6.4",
+        "dompdf/dompdf" : "0.8.3",
+        "ezyang/htmlpurifier" : "4.12.0",
+        "guzzlehttp/guzzle": "6.4.1",
+        "kamermans/guzzle-oauth2-subscriber": "1.0.6",
+        "knplabs/knp-snappy" : "1.1.0",
+        "league/omnipay": "3.0.2",
+        "mobiledetect/mobiledetectlib": "2.8.34",
+        "mpdf/mpdf" : "8.0.3",
+        "omnipay/stripe": "3.1.0",
+        "paragonie/multi-factor": "0.2.2",
+        "particle/validator": "2.3.4",
+        "pear/archive_tar" : "1.4.8",
+        "phpmailer/phpmailer" : "6.1.3",
+        "phpoffice/phpspreadsheet": "1.10.0",
+        "phpseclib/phpseclib" : "2.0.23",
+        "ramsey/uuid": "3.8.0",
+        "rospdf/pdf-php" : "0.12.58",
+        "smarty/smarty" : "2.6.31",
+        "symfony/config" : "4.4.2",
+        "symfony/dependency-injection" : "4.4.2",
+        "symfony/event-dispatcher" : "4.4.2",
+        "symfony/http-foundation" : "4.4.2",
+        "symfony/yaml" : "4.4.2",
+        "twig/twig" : "2.12.2",
+        "vlucas/phpdotenv" : "3.6.0",
+        "waryway/php-traits-library": "1.0.4",
+        "yubico/u2flib-server" : "1.0.2",
+        "zendframework/zend-config" : "3.3.0",
+        "zendframework/zend-db" : "2.10.0",
+        "zendframework/zend-eventmanager" : "3.2.1",
+        "zendframework/zend-escaper" : "2.6.1",
+        "zendframework/zend-filter" : "2.9.2",
+        "zendframework/zend-form" : "2.14.3",
+        "zendframework/zend-inputfilter" : "2.10.1",
+        "zendframework/zend-json" : "3.1.2",
+        "zendframework/zend-json-server": "3.2.0",
+        "zendframework/zend-loader" : "2.6.1",
+        "zendframework/zend-mvc" : "3.1.1",
+        "zendframework/zend-mvc-console": "1.2.0",
+        "zendframework/zend-mvc-i18n": "1.1.1",
+        "zendframework/zend-servicemanager" : "3.4.0",
+        "zendframework/zend-soap" : "2.8.0",
+        "zendframework/zend-stdlib" : "3.2.1",
+        "zendframework/zend-xmlrpc" : "2.8.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2"
+        }
+    },
+    "require-dev" : {
+    },
+    "repositories" : [{
+        "type" : "vcs",
+        "url" : "https://github.com/openemr/wkhtmltopdf-openemr"
+        }
+    ],
+    "autoload" : {
+        "exclude-from-classmap" : [
+            "src/Common/Compatibility/Checker.php",
+            "src/Common/Session/SessionUtil.php",
+            "library/classes/ClinicalTypes/",
+            "library/classes/rulesets/",
+            "library/classes/smtp/"
+        ],
+        "classmap" : [
+            "library/classes"
+        ],
+        "files" : [
+            "library/htmlspecialchars.inc.php",
+            "library/formdata.inc.php",
+            "library/sanitize.inc.php",
+            "library/formatting.inc.php",
+            "library/date_functions.php",
+            "library/validation/validate_core.php",
+            "library/translation.inc.php"
+        ],
+        "psr-4" : {
+            "OpenEMR\\" : "src"
+        }
+    }
+}
