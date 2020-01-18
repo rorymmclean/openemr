@@ -28,7 +28,7 @@ if (!empty($_POST)) {
 
 // Reference website links
 $websites = array(
-    'PetMD'     => 'https://www.petmd.com/search?Q=[%]',
+    //'PetMD'     => 'https://www.petmd.com/search?Q=[%]',
     'Medline'   => 'http://vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta?v%3Aproject=medlineplus&query=[%]&x=12&y=15',
     'eMedicine' => 'http://search.medscape.com/reference-search?newSearchHeader=1&queryText=[%]',
     'WebMD'     => 'http://www.webmd.com/search/search_results/default.aspx?query=[%]&sourceType=undefined'
